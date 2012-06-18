@@ -25,11 +25,12 @@ package;
  * @author Mike Almond
  */
 
-import haxe.Firebug;
+
 import js.Lib;
 import js.JQuery;
+import js.jQuery.JQueryAddress;
 
-import jqplugins.address.JQueryAddress;
+import haxe.Firebug;
 
 class Main {
 	

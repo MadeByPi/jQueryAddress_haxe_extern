@@ -45,7 +45,7 @@ THE SOFTWARE.*/
  */
 
 
-package jqplugins.address;
+package js.jQuery;
 
 import js.Dom;
 import js.Lib;
@@ -73,6 +73,11 @@ typedef JqAddressEvent = { > JqEvent, // cascading typedef - http://haxe.org/ref
 #end
 
 
+#if JQUERY_NOCONFLICT
+@:native("jQuery.address")
+#else
+@:native("$.address")
+#end
 extern class JQueryAddress extends JQuery {
 	
 	private static function __init__() : Void untyped {
@@ -86,11 +91,7 @@ extern class JQueryAddress extends JQuery {
 			#end
 		#end
 		
-		// check that jqplugins (a custom namepsace for our JQuery plugins) exists
-		untyped __js__("if(typeof window.jqplugins === 'undefined') { window.jqplugins = {}; }");
-		
-		// assign JQueryAddress to jqplugins.address.JQueryAddress (to match the package here - won't be found otherwise)
-		untyped __js__("window.jqplugins.address = { JQueryAddress : window.jQuery.address};");
+		JQueryAddress = window.jQuery.address;
 	}
 	
 	
