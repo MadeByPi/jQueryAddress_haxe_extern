@@ -12,8 +12,8 @@ Main.main = function() {
 	new js.JQuery(js.Lib.document).ready(function(e) {
 		if(haxe.Firebug.detect()) haxe.Firebug.redirectTraces();
 		$.address.title("Testing JQueryAddress.hx");
-		$.address.path("testio");
-		$.address.queryString("TESTO=test");
+		$.address.path("test-path");
+		$.address.queryString("testQueryString=test");
 		haxe.Log.trace("path: " + $.address.path(),{ fileName : "Main.hx", lineNumber : 52, className : "Main", methodName : "main"});
 		haxe.Log.trace("pathNames: " + $.address.pathNames(),{ fileName : "Main.hx", lineNumber : 53, className : "Main", methodName : "main"});
 		haxe.Log.trace("queryString: " + $.address.queryString(),{ fileName : "Main.hx", lineNumber : 54, className : "Main", methodName : "main"});

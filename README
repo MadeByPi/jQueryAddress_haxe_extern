@@ -1,0 +1,25 @@
+A Haxe JS extern class for the JQuery Address library - www.asual.com/jquery/address/
+
+By default it expect JQuery to be the core js.JQuery Haxe library, but you can opt to use jQueryExtern (http://lib.haxe.org/p/jQueryExtern) by adding the usejQueryExtern compiler option.
+
+By default, the compiler will include the JQuery Address JS source in the compiled output. Use the noEmbedJS compiler option to prevent this.
+
+:Compiler options:
+-D noEmbedJS
+-D usejQueryExtern
+-D JQUERY_NOCONFLICT
+
+
+:Usage example:
+	
+JQueryAddress.title("Testing JQueryAddress.hx");
+JQueryAddress.path("test-path");
+JQueryAddress.queryString("testQueryString=test");
+
+trace("path: " + JQueryAddress.path());
+trace("pathNames: " + JQueryAddress.pathNames());
+trace("queryString: " + JQueryAddress.queryString());
+
+JQueryAddress.change(function(e:JqAddressEvent):Void {
+	trace("onAddressChange: path:" + e.path + ", queryString:" + e.queryString);
+});

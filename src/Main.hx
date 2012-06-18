@@ -43,11 +43,9 @@ class Main {
 			
 			// testing JQueryAddress things
 			
-			//trace("baseURL: " + JQueryAddress.baseURL(), "info");
-			
 			JQueryAddress.title("Testing JQueryAddress.hx");
-			JQueryAddress.path("testio");
-			JQueryAddress.queryString("TESTO=test");
+			JQueryAddress.path("test-path");
+			JQueryAddress.queryString("testQueryString=test");
 			
 			trace("path: " + JQueryAddress.path());
 			trace("pathNames: " + JQueryAddress.pathNames());
