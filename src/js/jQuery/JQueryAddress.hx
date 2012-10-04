@@ -207,7 +207,7 @@ extern class JQueryAddress extends JQuery {
 	/**
 	 * .tracker
 	 */
-	@:overload(function():JqEvent{})
+	@:overload(function():JqAddressEvent{})
 	@:overload(function(value:String):JQueryAddress{})
 	public static function tracker():String;
 	
